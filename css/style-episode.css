@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'ZenKakuGothicNewMedium';
+    src: local('ZenKakuGothicNew-Medium'),
+        url('../ZenKakuGothicNew-Medium.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'ZenKakuGothicNewMedium';
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: url(../img/sky-stars.jpg);
+    color: azure;
+    scroll-behavior: smooth;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::-webkit-scrollbar { 
+    display: none; 
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 100px 100px 200px;
+}
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150px, -50%);
+    font-size: 4em;
+}
+
+
+.developer {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 40px;
+    padding-right: 63px;
+    background-image: url(../img/git.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom -7px;
+}
+
+.episod-img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.episod-name {
+    text-align: center;
+    font-size: 5em;
+}
+
+.episod-descr {
+    position: relative;
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 4em;
+    
+}
+
+p {
+    display: block;
+    text-align: center;
+    margin: 0;
+    font-size: 3em;
+}
+
+.on-index {
+    position: absolute;
+    top: 140px;
+    left: 175px;
+    font-size: 4em;
+    text-decoration: none;
+    color: aliceblue;
+    transition: all .3s ease-in-out;
+}
+
+.on-index:hover:not(:focus-visible) {
+    color: white;
+}
+
+.episod-1 {color: rgb(207, 207, 221);}
+.episod-2 {color: rgb(236, 223, 123);}
+.episod-3 {color: rgb(152, 189, 229);}
+.episod-4 {color: rgb(179, 131, 120);}
+.episod-5 {color: rgb(152, 201, 189);}
+.episod-6 {color: rgb(193, 188, 160);}

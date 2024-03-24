@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'ZenKakuGothicNewMedium';
+    src: local('ZenKakuGothicNew-Medium'),
+        url('../ZenKakuGothicNew-Medium.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'ZenKakuGothicNewMedium';
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: url(../img/sky-stars.jpg);
+    color: azure;
+    scroll-behavior: smooth;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::-webkit-scrollbar { 
+    display: none; 
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 100px 0 200px;
+}
+
+@keyframes title-shine {
+    from {
+        color: #c19ae5;
+        text-shadow: none
+    }
+    to {
+        color: #874bc0;
+        text-shadow:
+        0 0 7px #874bc0,
+        0 0 10px #874bc0,
+        0 0 21px #874bc0,
+        0 0 42px #874bc0,
+        0 0 82px #874bc0,
+        0 0 92px #874bc0,
+        0 0 102px #874bc0,
+        0 0 151px #874bc0;
+    }
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.3em;
+    animation: title-shine 2s infinite linear alternate;
+    letter-spacing: 0.3em;
+    -webkit-text-stroke: 1px #150202; 
+}
+
+h2 {
+    font-size: 2.3em;
+    font-weight: 900;
+    height: 120px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    background-color: rgb(0, 0, 0, .8);
+}
+
+.card {
+    position: relative;
+    padding: 15px 15px 100px;
+    max-width: calc((100% - 60px) / 3);
+    border: 0.2rem solid #bc13fe;
+    border-radius: 2rem;
+    box-shadow:
+        0 0 7px #bc13fe,
+        0 0 10px #bc13fe,
+        0 0 21px #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 1.4rem;
+   
+}
+
+.card__paragraf {
+    font-size: 26px;
+}
+
+.card__link {
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 44px;
+    color: #fff;
+    text-shadow:
+        0 0 3px #fff,
+        0 0 12px #0fa,
+        0 0 15px #0fa,
+        0 0 18px #0fa;
+}
+
+.developer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 40px;
+    padding-right: 63px;
+    background-image: url(../img/git.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom -7px;
+    color: #551a8b
+}
