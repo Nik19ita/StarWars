@@ -12,13 +12,10 @@ export function render(data, planetsInfo) {
                 propertyArray = data.properties.species
                 break;
         }
-        const propertySrcArray = []
-        for (let property of propertyArray) {
-            propertySrcArray.push(property)
-        }
 
+        const lastTwoSegmentPath = -2 
         return Promise.all(
-            propertySrcArray.map(src => planetsInfo(src.split('/').slice(-2).join('/'))))
+            propertyArray.map(src => planetsInfo(src.split('/').slice(lastTwoSegmentPath).join('/'))))
             .then(resolve => {
                 return resolve.map(item => item.result.properties.name)
             })
